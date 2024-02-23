@@ -72,7 +72,7 @@ variable "org_name" {
 variable "emergency_admins" {
   type        = list(string)
   description = "Defines the colleagues who are added to each subaccount as emergency administrators."
-  default     = ["jane.doe@test.com", "john.doe@test.com"]
+  default     = ["jane.doe@test.com", "john.doe@test.com", "theo.tester@test.com"]
 }
 
 
@@ -111,7 +111,12 @@ variable "entitlements" {
       name   = "sapappstudio"
       plan   = "standard-edition"
       amount = null
-    }
+    },
+    {
+      name   = "ai-launchpad"
+      plan   = "standard"
+      amount = null
+    },
   ]
 }
 
